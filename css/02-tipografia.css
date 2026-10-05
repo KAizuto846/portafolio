@@ -89,6 +89,10 @@ button:focus-visible {
     outline-offset: 2px;
 }
 
+section > p + p {
+    margin-top: var(--esp-2);
+}
+
 .cita {
     font-family: var(--fuente-mono);
     font-size: 1.05rem;

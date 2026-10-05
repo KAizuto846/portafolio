@@ -1,15 +1,15 @@
 [
     {
         "titulo": "Sistema POS",
-        "descripcion": "Sistema de punto de venta para pequeñas empresas con autenticación, productos, ventas, reportes y tema claro/oscuro.",
-        "tecnologias": ["Next.js", "React", "Prisma", "SQLite"],
+        "descripcion": "Punto de venta completo para pequeñas empresas: autenticación con recuperación de contraseña, control de productos, ventas y reportes. Incluye FEFO, versión de escritorio con Electron, tema claro/oscuro y sincronización LAN.",
+        "tecnologias": ["Next.js", "React", "Prisma", "SQLite", "Electron"],
         "imagen": "img/proyecto-pos.jpg",
         "alt": "Captura de la interfaz del sistema POS",
         "url": "https://github.com/KAizuto846/pos-system"
     },
     {
         "titulo": "Juego de Química Orgánica",
-        "descripcion": "Juego interactivo para practicar grupos funcionales orgánicos y armar reacciones químicas.",
+        "descripcion": "Videojuego educativo para practicar grupos funcionales orgánicos. Construí desde cero el motor de preguntas, el sistema de puntuación y las mecánicas de arrastrar y soltar para armar reacciones.",
         "tecnologias": ["HTML5", "CSS3", "JavaScript"],
         "imagen": "img/proyecto-quimica.jpg",
         "alt": "Captura del juego de química orgánica",
@@ -17,7 +17,7 @@
     },
     {
         "titulo": "Página Sobre Mí",
-        "descripcion": "Página personal con HTML5 semántico, accesibilidad nivel AA y auditoría Lighthouse verificada.",
+        "descripcion": "Mi primera página accesible: HTML5 semántico, jerarquía de encabezados correcta y Lighthouse 100 en accesibilidad y SEO. Fue el inicio de mi camino en el desarrollo web.",
         "tecnologias": ["HTML5", "CSS3", "Accesibilidad"],
         "imagen": "img/proyecto-sobre-mi.jpg",
         "alt": "Captura de la página sobre mí",
@@ -25,7 +25,7 @@
     },
     {
         "titulo": "Sitio con Bootstrap",
-        "descripcion": "Sitio de práctica que compara el uso de Bootstrap por CDN contra archivos locales.",
+        "descripcion": "Sitio de práctica donde comparé Bootstrap por CDN contra archivos locales y monté un sitio completo con hero, tarjetas, páginas de contenido y contacto.",
         "tecnologias": ["HTML5", "CSS3", "Bootstrap"],
         "imagen": "img/proyecto-frameworks.jpg",
         "alt": "Captura del sitio con Bootstrap",

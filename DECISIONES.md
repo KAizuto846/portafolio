@@ -6,13 +6,13 @@ Documento de decisiones del proyecto integrador del Capítulo 1: Portales Web.
 
 | Sección | Contenido | Por qué |
 | --- | --- | --- |
-| Inicio (hero) | Nombre, frase de presentación, foto, enlaces de contacto y acciones | Es lo primero que ve un reclutador; debe responder en 5 segundos "quién soy y qué hago" |
-| Sobre mí | 2 párrafos personales + pasatiempos + cita favorita | Humaniza el portafolio; el contenido es real (mis hobbies y mi libro favorito) |
+| Inicio (hero) | Nombre, cargo, descripción, foto, enlaces de contacto y acciones | Es lo primero que ve un reclutador; debe responder en 5 segundos "quién soy y qué hago" |
+| Sobre mí | 2 párrafos con mi formación, mis sistemas reales (POS, asistente de voz, app self-hosted) y mi forma de trabajar | Muestra que no solo hago ejercicios de clase: construyo proyectos que uso de verdad |
 | Habilidades | Tecnologías por categoría: Frontend, Backend, Herramientas | Organiza lo que sé para que sea fácil de leer de un vistazo |
 | Proyectos | 4 proyectos propios con imagen, descripción, tecnologías y enlace | El corazón del portafolio; solo proyectos donde yo tomé las decisiones |
 | Formación | Trayectoria académica en orden cronológico inverso | Muestra contexto: soy estudiante del CECyT No. 3 del IPN |
 | Contacto | Formulario validado + correo y GitHub | Cierra el ciclo: después de ver mi trabajo, que puedan escribirme |
-| Extras (aside) | Mis cursos favoritos y un dato curioso | Da profundidad personal sin alargar las secciones principales |
+| Extras (aside) | Mis cursos favoritos y una tarjeta "Fuera del código" | Da contexto humano sin alargar las secciones principales |
 
 ## Paleta de colores
 
@@ -76,5 +76,5 @@ GitHub Pages desde un repositorio dedicado, porque es gratis, no requiere cuenta
 ## Decisiones que tomé conscientemente
 
 - **Sin frameworks JS:** el portafolio usa HTML/CSS/JS vanilla para demostrar que entiendo los fundamentos.
-- **Sin contenido inventado:** todos los proyectos son reales y los construí yo; el texto de "Sobre mí" proviene de mis prácticas anteriores.
+- **Sin contenido inventado:** todos los proyectos son reales y los construí yo; el texto de "Sobre mí" describe mis sistemas reales (POS, asistente de voz, app self-hosted) que cualquiera puede verificar en mi GitHub.
 - **4 proyectos, no 6:** prefiero pocos proyectos bien hechos y que pueda explicar en una entrevista.
