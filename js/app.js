@@ -2,24 +2,23 @@ const prefiereMovimientoReducido = window.matchMedia('(prefers-reduced-motion: r
 
 const botonTema = document.getElementById('boton-tema');
 const temaGuardado = localStorage.getItem('tema');
-const sistemaOscuro = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 function aplicarTema(oscuro) {
-    document.documentElement.classList.toggle('dark', oscuro);
+    document.documentElement.classList.toggle('light', !oscuro);
     botonTema.setAttribute('aria-pressed', String(oscuro));
     botonTema.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
 }
 
 if (temaGuardado) {
-    aplicarTema(temaGuardado === 'dark');
+    aplicarTema(temaGuardado === 'oscuro');
 } else {
-    aplicarTema(sistemaOscuro);
+    aplicarTema(true);
 }
 
 botonTema.addEventListener('click', () => {
-    const oscuro = document.documentElement.classList.toggle('dark');
-    localStorage.setItem('tema', oscuro ? 'dark' : 'light');
-    aplicarTema(oscuro);
+    const claro = document.documentElement.classList.toggle('light');
+    localStorage.setItem('tema', claro ? 'claro' : 'oscuro');
+    aplicarTema(!claro);
 });
 
 const botonMenu = document.getElementById('boton-menu');
@@ -53,6 +52,18 @@ document.addEventListener('keydown', (evento) => {
 });
 
 const enlacesNavegacion = document.querySelectorAll('.menu-lista a[href^="#"]');
+
+const observador = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+            enlacesNavegacion.forEach((enlace) => {
+                enlace.classList.toggle('activo', enlace.getAttribute('href') === '#' + entrada.target.id);
+            });
+        }
+    });
+}, { rootMargin: '-40% 0px -55% 0px' });
+
+document.querySelectorAll('main section[id]').forEach((seccion) => observador.observe(seccion));
 
 enlacesNavegacion.forEach((enlace) => {
     enlace.addEventListener('click', (evento) => {

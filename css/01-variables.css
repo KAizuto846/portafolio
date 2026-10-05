@@ -1,18 +1,21 @@
 :root {
-    --color-primario: #0569a8;
-    --color-primario-hover: #045687;
-    --color-fondo: #f8fafc;
-    --color-tarjeta: #ffffff;
-    --color-texto: #0f172a;
-    --color-texto-muted: #475569;
-    --color-borde: #cbd5e1;
-    --color-focus: #ea580c;
-    --color-exito: #15803d;
-    --color-error: #b91c1c;
-    --color-etiqueta-fondo: #e0f2fe;
-    --color-etiqueta-texto: #075985;
-    --color-cita-fondo: #f1f5f9;
-    --color-sombra: rgba(15, 23, 42, 0.08);
+    --color-primario: #ff4da6;
+    --color-primario-hover: #ff76bc;
+    --color-fondo: #17181c;
+    --color-tarjeta: #1e1e24;
+    --color-texto: #e5e7eb;
+    --color-texto-fuerte: #ffffff;
+    --color-texto-muted: #9ca3af;
+    --color-borde: rgba(255, 255, 255, 0.09);
+    --color-hover: rgba(255, 255, 255, 0.06);
+    --color-focus: #ffd166;
+    --color-exito: #4ade80;
+    --color-error: #f87171;
+    --color-etiqueta-fondo: #2a2530;
+    --color-etiqueta-texto: #ffb3d9;
+    --color-cita-fondo: rgba(255, 255, 255, 0.04);
+    --color-boton-texto: #17181c;
+    --color-sombra: rgba(0, 0, 0, 0.35);
 
     --fuente-principal: 'Inter', system-ui, sans-serif;
     --fuente-mono: 'JetBrains Mono', monospace;
@@ -24,24 +27,27 @@
     --esp-5: 3rem;
 
     --radio: 8px;
-    --radio-grande: 12px;
-    --sombra: 0 2px 8px var(--color-sombra);
+    --radio-grande: 16px;
+    --sombra: 0 2px 10px var(--color-sombra);
     --max-ancho: 1100px;
 }
 
-html.dark {
-    --color-primario: #7cc0f0;
-    --color-primario-hover: #9ad0f5;
-    --color-fondo: #0f172a;
-    --color-tarjeta: #1e293b;
-    --color-texto: #f1f5f9;
-    --color-texto-muted: #94a3b8;
-    --color-borde: #334155;
-    --color-focus: #fb923c;
-    --color-exito: #4ade80;
-    --color-error: #f87171;
-    --color-etiqueta-fondo: #0c4a6e;
-    --color-etiqueta-texto: #e0f2fe;
-    --color-cita-fondo: #1e293b;
-    --color-sombra: rgba(0, 0, 0, 0.4);
+html.light {
+    --color-primario: #a70d69;
+    --color-primario-hover: #8e0b58;
+    --color-fondo: #f7f7f9;
+    --color-tarjeta: #ffffff;
+    --color-texto: #1f2328;
+    --color-texto-fuerte: #0f1115;
+    --color-texto-muted: #5b6470;
+    --color-borde: rgba(15, 23, 42, 0.10);
+    --color-hover: rgba(15, 23, 42, 0.05);
+    --color-focus: #ea580c;
+    --color-exito: #15803d;
+    --color-error: #b91c1c;
+    --color-etiqueta-fondo: #fbe3f2;
+    --color-etiqueta-texto: #8e0b58;
+    --color-cita-fondo: #f0f0f4;
+    --color-boton-texto: #ffffff;
+    --color-sombra: rgba(15, 23, 42, 0.10);
 }

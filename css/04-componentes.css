@@ -40,8 +40,14 @@
 }
 
 .menu-lista a:hover {
-    background-color: var(--color-fondo);
+    background-color: var(--color-hover);
     color: var(--color-primario-hover);
+}
+
+.menu-lista a.activo {
+    color: var(--color-primario);
+    border-bottom: 3px solid var(--color-primario);
+    border-radius: 0;
 }
 
 .boton-menu {
@@ -92,11 +98,11 @@
     display: none;
 }
 
-html.dark .icono-luna {
+html.light .icono-luna {
     display: none;
 }
 
-html.dark .icono-sol {
+html.light .icono-sol {
     display: block;
 }
 
@@ -105,7 +111,7 @@ html.dark .icono-sol {
     font-weight: 600;
     text-decoration: none;
     padding: var(--esp-1) var(--esp-3);
-    border-radius: var(--radio);
+    border-radius: 999px;
     border: 2px solid transparent;
     cursor: pointer;
     text-align: center;
@@ -113,12 +119,14 @@ html.dark .icono-sol {
 
 .boton-primario {
     background-color: var(--color-primario);
-    color: #ffffff;
+    color: var(--color-boton-texto);
+    box-shadow: 0 4px 14px rgba(255, 77, 166, 0.3);
 }
 
 .boton-primario:hover {
     background-color: var(--color-primario-hover);
-    color: #ffffff;
+    color: var(--color-boton-texto);
+    transform: translateY(-1px);
 }
 
 .boton-secundario {
@@ -128,11 +136,11 @@ html.dark .icono-sol {
 
 .boton-secundario:hover {
     background-color: var(--color-primario);
-    color: #ffffff;
+    color: var(--color-boton-texto);
 }
 
 .boton-primario:visited {
-    color: #ffffff;
+    color: var(--color-boton-texto);
 }
 
 .tarjeta {

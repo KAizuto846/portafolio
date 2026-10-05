@@ -67,29 +67,37 @@
         <div class="contenido">
 
             <section id="inicio" class="hero">
-                <div class="hero-texto">
-                    <p class="hero-saludo">Hola, soy</p>
-                    <h2>Victor Eduardo Rivera Corona</h2>
-                    <p class="hero-cargo">Estudiante de Programación · Desarrollador de sistemas y automatizaciones</p>
-                    <p class="hero-descripcion">No hago solo ejercicios de clase: diseño, desarrollo y despliego sistemas completos — un punto de venta para pequeñas empresas, un asistente de voz con IA y aplicaciones web con Next.js. Uso Linux a diario y cuando algo no funciona, cambio de enfoque hasta que funciona.</p>
-                    <div class="hero-acciones">
-                        <a href="#proyectos" class="boton boton-primario">Ver proyectos</a>
-                        <a href="#contacto" class="boton boton-secundario">Contactarme</a>
+                <div class="perfil-banner" aria-hidden="true"></div>
+                <div class="perfil">
+                    <img class="foto-perfil" src="img/foto-perfil.webp" alt="Fotografía de Victor Eduardo Rivera Corona" width="512" height="512" fetchpriority="high">
+                    <div class="perfil-texto">
+                        <p class="saludo">✨ Hola, soy</p>
+                        <h2>Victor Eduardo Rivera Corona</h2>
+                        <p class="cargo">Estudiante de Programación · Desarrollador de sistemas y automatizaciones</p>
+                        <p class="descripcion">No hago solo ejercicios de clase: diseño, desarrollo y despliego sistemas completos — un punto de venta para pequeñas empresas, un asistente de voz con IA y aplicaciones web con Next.js. Uso Linux a diario y cuando algo no funciona, cambio de enfoque hasta que funciona.</p>
+                        <ul class="etiquetas tecnologias" aria-label="Tecnologías destacadas">
+                            <li class="etiqueta">Next.js</li>
+                            <li class="etiqueta">React</li>
+                            <li class="etiqueta">Node.js</li>
+                            <li class="etiqueta">Python</li>
+                            <li class="etiqueta">Linux</li>
+                            <li class="etiqueta">IA local</li>
+                        </ul>
+                        <div class="acciones">
+                            <a href="#proyectos" class="boton boton-primario">Ver proyectos</a>
+                            <a href="#contacto" class="boton boton-secundario">Contactarme</a>
+                        </div>
+                        <p class="links">
+                            <a href="https://github.com/KAizuto846" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <a href="mailto:fcdtsh7zrk0@hotmail.com">Correo</a>
+                        </p>
                     </div>
-                    <p class="hero-contacto">
-                        <a href="https://github.com/KAizuto846" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        <a href="mailto:fcdtsh7zrk0@hotmail.com">Correo</a>
-                    </p>
                 </div>
-                <figure class="hero-foto">
-                    <img src="img/hero.jpg" alt="Fotografía de Victor Eduardo Rivera Corona" width="640" height="360" fetchpriority="high">
-                    <figcaption>Victor Eduardo Rivera Corona</figcaption>
-                </figure>
             </section>
 
             <section id="sobre-mi">
                 <h2 class="titulo-seccion">Sobre mí</h2>
-                <p>Soy estudiante de programación en el CECyT No. 3 "Estanislao Ramírez Ruiz" del IPN, en Ecatepec, y desarrollador autodidacta. No me gusta quedarme con la teoría: construí mi propio sistema de punto de venta para pequeñas empresas (Next.js + SQLite + Electron), un asistente de voz con IA que responde desde mi propio servidor y una app de tutoría estilo Astra self-hosted a la que acceso desde mi teléfono.</p>
+                <p>Soy estudiante de programación en el CECyT No. 3 "Estanislao Ramírez Ruiz" del IPN, en Ecatepec, y desarrollador autodidacta. No me gusta quedarme con la teoría: construí mi propio clon self-hosted de Astra AI (tutor de estudio con IA), un generador de audiolibros con voz local, un contador de calorías que reconoce tu comida por foto, un sistema de punto de venta para pequeñas empresas (Next.js + SQLite + Electron) y un asistente de voz con IA que responde desde mi propio servidor.</p>
                 <p>Uso Linux como sistema operativo diario, configuro mis propias redes con Tailscale y automatizo lo que repito: si hago algo dos veces, busco la forma de que el sistema lo haga por mí. Mi forma de trabajar: entender el problema, elegir la herramienta correcta y, si algo falla, probar otra vez con un enfoque distinto.</p>
             </section>
 
@@ -115,6 +123,7 @@
                             <li>Prisma</li>
                             <li>SQLite</li>
                             <li>Python</li>
+                            <li>Flask</li>
                         </ul>
                     </article>
                     <article class="tarjeta">
@@ -123,8 +132,9 @@
                             <li>Git y GitHub</li>
                             <li>Linux (uso diario)</li>
                             <li>Redes y Tailscale</li>
+                            <li>IA local (TTS y visión)</li>
+                            <li>Kotlin Multiplatform</li>
                             <li>Builds Android (APK)</li>
-                            <li>VS Code y NetBeans</li>
                         </ul>
                     </article>
                 </div>
@@ -148,7 +158,7 @@
                 <article class="tarjeta linea-tiempo">
                     <p class="fecha">En curso</p>
                     <h3>Proyectos personales</h3>
-                    <p>Un asistente de voz con IA que responde desde mi propio servidor, una app de tutoría self-hosted accesible desde mi celular y un sistema POS para practicar arquitectura, bases de datos e interfaces reales.</p>
+                    <p>Un clon de Astra AI self-hosted con podcasts estilo NotebookLM, un generador de audiolibros con voz local, un contador de calorías con visión por IA, un asistente de voz y un sistema POS para practicar arquitectura, bases de datos e interfaces reales.</p>
                 </article>
             </section>
 

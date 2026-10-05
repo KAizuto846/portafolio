@@ -10,7 +10,7 @@ h2,
 h3 {
     line-height: 1.25;
     font-weight: 700;
-    color: var(--color-texto);
+    color: var(--color-texto-fuerte);
 }
 
 h1 {
@@ -32,7 +32,7 @@ p {
 
 .marca {
     font-weight: 800;
-    color: var(--color-texto);
+    color: var(--color-texto-fuerte);
 }
 
 .titulo-seccion {
@@ -41,7 +41,7 @@ p {
     text-align: center;
 }
 
-.hero-saludo {
+.saludo {
     font-size: 1rem;
     font-weight: 600;
     color: var(--color-texto-muted);
@@ -49,13 +49,13 @@ p {
     letter-spacing: 0.08em;
 }
 
-.hero-cargo {
+.cargo {
     font-size: 1.125rem;
     font-weight: 600;
     color: var(--color-primario);
 }
 
-.hero-descripcion {
+.descripcion {
     color: var(--color-texto-muted);
 }
 
