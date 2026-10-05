@@ -1,0 +1,287 @@
+.skip-link {
+    position: absolute;
+    top: -60px;
+    left: var(--esp-2);
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: 600;
+    padding: var(--esp-1) var(--esp-2);
+    border-radius: 4px;
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    top: var(--esp-2);
+}
+
+.menu {
+    display: none;
+    flex-basis: 100%;
+    order: 4;
+}
+
+.menu.abierto {
+    display: block;
+}
+
+.menu-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--esp-1);
+}
+
+.menu-lista a {
+    display: block;
+    font-weight: 600;
+    text-decoration: none;
+    padding: var(--esp-1) var(--esp-2);
+    border-radius: var(--radio);
+}
+
+.menu-lista a:hover {
+    background-color: var(--color-fondo);
+    color: var(--color-primario-hover);
+}
+
+.boton-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    width: 42px;
+    height: 42px;
+    background-color: transparent;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
+    cursor: pointer;
+}
+
+.barra {
+    display: block;
+    width: 22px;
+    height: 2px;
+    margin: 0 auto;
+    background-color: var(--color-texto);
+}
+
+.boton-tema {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-left: auto;
+    background-color: transparent;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
+    cursor: pointer;
+    color: var(--color-texto);
+}
+
+.boton-tema:hover {
+    border-color: var(--color-primario);
+    color: var(--color-primario);
+}
+
+.icono-luna {
+    display: block;
+}
+
+.icono-sol {
+    display: none;
+}
+
+html.dark .icono-luna {
+    display: none;
+}
+
+html.dark .icono-sol {
+    display: block;
+}
+
+.boton {
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: none;
+    padding: var(--esp-1) var(--esp-3);
+    border-radius: var(--radio);
+    border: 2px solid transparent;
+    cursor: pointer;
+    text-align: center;
+}
+
+.boton-primario {
+    background-color: var(--color-primario);
+    color: #ffffff;
+}
+
+.boton-primario:hover {
+    background-color: var(--color-primario-hover);
+    color: #ffffff;
+}
+
+.boton-secundario {
+    border-color: var(--color-primario);
+    color: var(--color-primario);
+}
+
+.boton-secundario:hover {
+    background-color: var(--color-primario);
+    color: #ffffff;
+}
+
+.boton-primario:visited {
+    color: #ffffff;
+}
+
+.tarjeta {
+    background-color: var(--color-tarjeta);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-grande);
+    box-shadow: var(--sombra);
+    padding: var(--esp-3);
+}
+
+.tarjeta img {
+    border-radius: var(--radio);
+    border: 1px solid var(--color-borde);
+}
+
+.tarjeta-pasatiempo p {
+    font-size: 0.9rem;
+    color: var(--color-texto-muted);
+}
+
+.tarjeta-proyecto {
+    display: flex;
+    flex-direction: column;
+    gap: var(--esp-2);
+}
+
+.tarjeta-proyecto .descripcion {
+    flex: 1;
+    font-size: 0.95rem;
+    color: var(--color-texto-muted);
+}
+
+.tarjeta-proyecto img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.etiquetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--esp-1);
+    list-style: none;
+}
+
+.etiqueta {
+    font-family: var(--fuente-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-etiqueta-texto);
+    background-color: var(--color-etiqueta-fondo);
+    padding: 0.2rem 0.6rem;
+    border-radius: 99px;
+}
+
+.enlace-proyecto {
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.enlace-proyecto:hover {
+    text-decoration: underline;
+}
+
+.lista-habilidades {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--esp-1);
+}
+
+.lista-habilidades li {
+    border-left: 3px solid var(--color-primario);
+    padding-left: var(--esp-1);
+}
+
+.linea-tiempo p:last-child {
+    font-size: 0.95rem;
+    color: var(--color-texto-muted);
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: var(--esp-3);
+    background-color: var(--color-tarjeta);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-grande);
+    box-shadow: var(--sombra);
+    padding: var(--esp-3);
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--esp-1);
+}
+
+.campo label {
+    font-weight: 600;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    background-color: var(--color-fondo);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
+    padding: var(--esp-1) var(--esp-2);
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    border-color: var(--color-primario);
+}
+
+.campo input[aria-invalid="true"],
+.campo textarea[aria-invalid="true"] {
+    border-color: var(--color-error);
+}
+
+.error {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-error);
+}
+
+.exito {
+    font-weight: 600;
+    color: var(--color-exito);
+    background-color: var(--color-cita-fondo);
+    border: 1px solid var(--color-exito);
+    border-radius: var(--radio);
+    padding: var(--esp-2);
+}
+
+.tarjeta-contacto p {
+    font-size: 0.9rem;
+    color: var(--color-texto-muted);
+}
+
+.lista-contacto {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--esp-1);
+    margin-top: var(--esp-2);
+}
+
+.lista-contacto a {
+    font-weight: 600;
+}

@@ -1,0 +1,110 @@
+.encabezado {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--esp-2);
+    background-color: var(--color-tarjeta);
+    border-bottom: 1px solid var(--color-borde);
+    padding: var(--esp-2) var(--esp-3);
+}
+
+.layout {
+    flex: 1;
+    width: 100%;
+    max-width: var(--max-ancho);
+    margin: 0 auto;
+    display: grid;
+    gap: var(--esp-4);
+    grid-template-columns: 1fr;
+    padding: var(--esp-4) var(--esp-3) var(--esp-5);
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    gap: var(--esp-5);
+}
+
+section[id],
+aside[aria-label] {
+    scroll-margin-top: 90px;
+}
+
+.hero {
+    display: grid;
+    gap: var(--esp-3);
+    align-items: center;
+}
+
+.hero-texto {
+    display: flex;
+    flex-direction: column;
+    gap: var(--esp-2);
+}
+
+.hero-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--esp-2);
+}
+
+.hero-contacto {
+    display: flex;
+    gap: var(--esp-3);
+    font-weight: 600;
+}
+
+.hero-foto img {
+    border-radius: var(--radio-grande);
+    border: 1px solid var(--color-borde);
+    box-shadow: var(--sombra);
+}
+
+.hobbies {
+    display: grid;
+    gap: var(--esp-2);
+}
+
+.grid-habilidades {
+    display: grid;
+    gap: var(--esp-2);
+}
+
+.grid-proyectos {
+    display: grid;
+    gap: var(--esp-3);
+    margin-top: var(--esp-3);
+}
+
+.grid-contacto {
+    display: grid;
+    gap: var(--esp-3);
+}
+
+.extras {
+    display: flex;
+    flex-direction: column;
+    gap: var(--esp-3);
+    align-self: start;
+}
+
+.pie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--esp-1);
+    text-align: center;
+    background-color: var(--color-tarjeta);
+    border-top: 1px solid var(--color-borde);
+    padding: var(--esp-3);
+    font-size: 0.875rem;
+    color: var(--color-texto-muted);
+}
+
+.pie-links {
+    display: flex;
+    gap: var(--esp-3);
+}

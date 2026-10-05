@@ -1,0 +1,121 @@
+body {
+    font-family: var(--fuente-principal);
+    font-size: 1rem;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.25;
+    font-weight: 700;
+    color: var(--color-texto);
+}
+
+h1 {
+    font-size: 1.25rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.125rem;
+    margin-bottom: var(--esp-1);
+}
+
+p {
+    color: var(--color-texto);
+}
+
+.marca {
+    font-weight: 800;
+    color: var(--color-texto);
+}
+
+.titulo-seccion {
+    color: var(--color-primario);
+    margin-bottom: var(--esp-3);
+    text-align: center;
+}
+
+.hero-saludo {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-texto-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.hero-cargo {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-primario);
+}
+
+.hero-descripcion {
+    color: var(--color-texto-muted);
+}
+
+.fecha {
+    font-family: var(--fuente-mono);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-primario);
+}
+
+a {
+    color: var(--color-primario);
+}
+
+a:hover {
+    color: var(--color-primario-hover);
+    text-decoration-thickness: 2px;
+}
+
+a:visited {
+    color: var(--color-primario);
+}
+
+a:active {
+    color: var(--color-primario-hover);
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 2px;
+}
+
+.cita {
+    font-family: var(--fuente-mono);
+    font-size: 1.05rem;
+    color: var(--color-texto);
+    background-color: var(--color-cita-fondo);
+    border-left: 4px solid var(--color-primario);
+    border-radius: 0 var(--radio) var(--radio) 0;
+    padding: var(--esp-2) var(--esp-3);
+    margin-top: var(--esp-4);
+}
+
+.cita cite {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--color-texto-muted);
+    margin-top: var(--esp-1);
+}
+
+figcaption {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--color-texto-muted);
+    margin-top: 0.35rem;
+    text-align: center;
+}
+
+::selection {
+    background-color: var(--color-primario);
+    color: #ffffff;
+}

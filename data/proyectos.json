@@ -1,0 +1,34 @@
+[
+    {
+        "titulo": "Sistema POS",
+        "descripcion": "Sistema de punto de venta para pequeñas empresas con autenticación, productos, ventas, reportes y tema claro/oscuro.",
+        "tecnologias": ["Next.js", "React", "Prisma", "SQLite"],
+        "imagen": "img/proyecto-pos.jpg",
+        "alt": "Captura de la interfaz del sistema POS",
+        "url": "https://github.com/KAizuto846/pos-system"
+    },
+    {
+        "titulo": "Juego de Química Orgánica",
+        "descripcion": "Juego interactivo para practicar grupos funcionales orgánicos y armar reacciones químicas.",
+        "tecnologias": ["HTML5", "CSS3", "JavaScript"],
+        "imagen": "img/proyecto-quimica.jpg",
+        "alt": "Captura del juego de química orgánica",
+        "url": "https://github.com/KAizuto846/quimica-funcionales-game"
+    },
+    {
+        "titulo": "Página Sobre Mí",
+        "descripcion": "Página personal con HTML5 semántico, accesibilidad nivel AA y auditoría Lighthouse verificada.",
+        "tecnologias": ["HTML5", "CSS3", "Accesibilidad"],
+        "imagen": "img/proyecto-sobre-mi.jpg",
+        "alt": "Captura de la página sobre mí",
+        "url": "https://github.com/KAizuto846/mi-pagina-sobre-mi"
+    },
+    {
+        "titulo": "Sitio con Bootstrap",
+        "descripcion": "Sitio de práctica que compara el uso de Bootstrap por CDN contra archivos locales.",
+        "tecnologias": ["HTML5", "CSS3", "Bootstrap"],
+        "imagen": "img/proyecto-frameworks.jpg",
+        "alt": "Captura del sitio con Bootstrap",
+        "url": "https://github.com/KAizuto846/Portales"
+    }
+]

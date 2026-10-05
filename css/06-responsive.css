@@ -1,0 +1,94 @@
+@media (min-width: 640px) {
+    .hobbies {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .grid-habilidades {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .grid-proyectos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pie {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+@media (min-width: 860px) {
+    .encabezado {
+        flex-wrap: nowrap;
+    }
+
+    .boton-menu {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        flex-basis: auto;
+        order: 0;
+        margin-left: auto;
+    }
+
+    .boton-tema {
+        margin-left: 0;
+    }
+
+    .menu-lista {
+        flex-direction: row;
+        align-items: center;
+        gap: var(--esp-1);
+    }
+
+    .menu-lista a {
+        padding: var(--esp-1);
+    }
+}
+
+@media (min-width: 1024px) {
+    .layout {
+        grid-template-columns: 1fr 300px;
+        gap: var(--esp-4);
+    }
+
+    .hero {
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: var(--esp-5);
+    }
+
+    .grid-contacto {
+        grid-template-columns: 1.4fr 1fr;
+        align-items: start;
+    }
+
+    .titulo-seccion {
+        text-align: left;
+    }
+}
+
+@media (min-width: 1280px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    .layout {
+        padding-top: var(--esp-5);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
