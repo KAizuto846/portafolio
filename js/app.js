@@ -11,6 +11,8 @@ function aplicarTema(oscuro) {
 
 if (temaGuardado) {
     aplicarTema(temaGuardado === 'oscuro');
+} else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+    aplicarTema(false);
 } else {
     aplicarTema(true);
 }
