@@ -166,7 +166,7 @@ fetch('data/proyectos.json')
             return `
                 <article class="tarjeta tarjeta-proyecto">
                     <h3>${proyecto.titulo}</h3>
-                    <img src="${proyecto.imagen}" alt="${proyecto.alt}" loading="lazy">
+                    <img src="${proyecto.imagen}" alt="${proyecto.alt}" loading="lazy" width="480" height="300">
                     <p class="descripcion">${proyecto.descripcion}</p>
                     <ul class="etiquetas">${etiquetas}</ul>
                     <a class="enlace-proyecto" href="${proyecto.url}" target="_blank" rel="noopener noreferrer">Ver en GitHub →</a>
