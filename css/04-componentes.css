@@ -151,6 +151,15 @@ html.light .icono-sol {
     padding: var(--esp-3);
 }
 
+#habilidades .tarjeta,
+#formacion .tarjeta {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+}
+
 .tarjeta img {
     border-radius: var(--radio);
     border: 1px solid var(--color-borde);
