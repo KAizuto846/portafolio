@@ -30,29 +30,6 @@ p {
     color: var(--color-texto);
 }
 
-.marca {
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-}
-
-.marca-logo {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 12px;
-    background-color: var(--color-primario);
-    color: var(--color-boton-texto);
-    font-weight: 800;
-    font-size: 1rem;
-}
-
-.marca:hover .marca-logo {
-    background-color: var(--color-primario-hover);
-}
-
 .titulo-seccion {
     color: var(--color-primario);
     margin-bottom: var(--esp-3);
