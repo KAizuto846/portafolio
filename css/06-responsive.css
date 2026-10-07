@@ -1,3 +1,11 @@
+/* A partir de aquí el hero ya es más ancho de lo que cubre la imagen de móvil,
+   así que se usa la versión grande del banner. */
+@media (min-width: 481px) {
+    .perfil-banner {
+        background-image: url('../img/fondo.webp');
+    }
+}
+
 @media (min-width: 640px) {
     .hobbies {
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));

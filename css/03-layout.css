@@ -70,7 +70,10 @@ aside[aria-label] {
 
 .perfil-banner {
     height: 240px;
-    background-image: url('../img/fondo.webp');
+    /* Mobile-first: en pantallas de hasta 480px el hero mide ~364px de ancho, así
+       que con esta imagen de 760px ya se ve nitida a 1.75x de densidad (24.6 KB en
+       vez de 57.7 KB). A partir de 481px se cambia por la grande en 06-responsive.css. */
+    background-image: url('../img/fondo-760.webp');
     background-size: cover;
     background-position: center;
     /* El brillo/contraste va aplicado dentro del propio webp: un filter en un
