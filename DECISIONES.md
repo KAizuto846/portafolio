@@ -41,7 +41,7 @@ tipografía después del primer pintado. Son fuentes variables recortadas con
 `tools/subset-fonts.py`: solo el juego de caracteres que usa el sitio
 (Latin-1 completo, que cubre todo el español, más comillas tipográficas y
 guiones largos) y el eje de pesos limitado a 400-800. Pasan de 86.6 KB a
-52.9 KB en 2 archivos, y los pesos 600 y 700 siguen siendo exactos (no
+37.7 KB en 2 archivos, y los pesos 600 y 700 siguen siendo exactos (no
 sintetizados).
 
 ## Layout

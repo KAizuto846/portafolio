@@ -1,8 +1,10 @@
 /* Fuentes propias, servidas desde este mismo origen (sin DNS/TLS de terceros).
    Son las fuentes variables de Google Fonts recortadas con tools/subset-fonts.py:
    - solo el juego de caracteres que usa el sitio (Latin-1 completo + tipografia),
-   - eje de pesos limitado a 400-800, que es lo que usa el diseno.
-   Resultado: 52.9 KB en 2 archivos, en vez de 86.6 KB, con todos los pesos exactos.
+   - eje de pesos limitado a 400-800, que es lo que usa el diseno,
+   - fuera las tablas que no se usan al pintar (metadatos y, en la monoespaciada,
+     su GSUB con ligaduras que van tras ss01 y el CSS no activa).
+   Resultado: 37.7 KB en 2 archivos, en vez de 86.6 KB, con todos los pesos exactos.
    Para regenerarlas: python3 tools/subset-fonts.py  (requiere fonttools + brotli). */
 
 @font-face {

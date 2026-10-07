@@ -154,29 +154,58 @@ formulario.addEventListener('submit', (evento) => {
 });
 
 const contenedorProyectos = document.getElementById('grid-proyectos');
+let proyectosCargados = false;
 
-fetch('data/proyectos.json')
-    .then((respuesta) => respuesta.json())
-    .then((proyectos) => {
-        const tarjetas = proyectos.map((proyecto) => {
-            const etiquetas = proyecto.tecnologias
-                .map((tecnologia) => `<li class="etiqueta">${tecnologia}</li>`)
-                .join('');
+function cargarProyectos() {
+    if (proyectosCargados) {
+        return;
+    }
+    proyectosCargados = true;
 
-            return `
+    fetch('data/proyectos.json')
+        .then((respuesta) => respuesta.json())
+        .then((proyectos) => {
+            const tarjetas = proyectos.map((proyecto) => {
+                const etiquetas = proyecto.tecnologias
+                    .map((tecnologia) => `<li class="etiqueta">${tecnologia}</li>`)
+                    .join('');
+
+                return `
                 <article class="tarjeta tarjeta-proyecto">
                     <h3>${proyecto.titulo}</h3>
-                    <img src="${proyecto.imagen}" alt="${proyecto.alt}" loading="lazy" width="480" height="300">
+                    <img src="${proyecto.imagen}" alt="${proyecto.alt}" loading="lazy" decoding="async" width="480" height="300">
                     <p class="descripcion">${proyecto.descripcion}</p>
                     <ul class="etiquetas">${etiquetas}</ul>
                     <a class="enlace-proyecto" href="${proyecto.url}" target="_blank" rel="noopener noreferrer">Ver en GitHub →</a>
                 </article>`;
-        });
+            });
 
-        contenedorProyectos.innerHTML = tarjetas.join('');
-    })
-    .catch(() => {
-        contenedorProyectos.innerHTML = '<p class="texto-centrado">No se pudieron cargar los proyectos.</p>';
-    });
+            contenedorProyectos.innerHTML = tarjetas.join('');
+        })
+        .catch(() => {
+            contenedorProyectos.innerHTML = '<p class="texto-centrado">No se pudieron cargar los proyectos.</p>';
+        });
+}
+
+/* Los proyectos están bajo el pliegue: se piden cuando la sección se acerca, y como
+   mucho al terminar de cargar la página. Así sus imágenes no le roban ancho de banda
+   al primer pintado (que es lo que mide el Speed Index). */
+const seccionProyectos = document.getElementById('proyectos');
+
+if ('IntersectionObserver' in window && seccionProyectos) {
+    const observadorProyectos = new IntersectionObserver(
+        (entradas) => {
+            if (entradas.some((entrada) => entrada.isIntersecting)) {
+                observadorProyectos.disconnect();
+                cargarProyectos();
+            }
+        },
+        { rootMargin: '200px 0px' },
+    );
+    observadorProyectos.observe(seccionProyectos);
+    window.addEventListener('load', cargarProyectos);
+} else {
+    cargarProyectos();
+}
 
 document.getElementById('anio').textContent = new Date().getFullYear();

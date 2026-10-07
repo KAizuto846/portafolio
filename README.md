@@ -7,7 +7,7 @@ Sitio web personal construido con HTML5 semántico, CSS3 moderno y JavaScript va
 - CSS3 con custom properties, Flexbox y Grid, mobile-first  
 - Responsive desde 320px hasta 4K con 4 breakpoints  
 - 100 en las cuatro categorías de Lighthouse (performance, accesibilidad, buenas prácticas y SEO)  
-- Fuentes propias (Inter y JetBrains Mono variables) recortadas al juego de caracteres del sitio: 52.9 KB en 2 archivos, sin DNS de terceros  
+- Fuentes propias (Inter y JetBrains Mono variables) recortadas al juego de caracteres del sitio: 37.7 KB en 2 archivos, sin DNS de terceros  
 - Modo oscuro con preferencia del sistema y localStorage, decidido antes del primer pintado  
 - Menú hamburguesa, scroll suave y formulario con validación  
 - Proyectos cargados dinámicamente con fetch  
