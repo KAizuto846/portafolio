@@ -78,3 +78,4 @@ GitHub Pages desde un repositorio dedicado, porque es gratis, no requiere cuenta
 - **Sin frameworks JS:** el portafolio usa HTML/CSS/JS vanilla para demostrar que entiendo los fundamentos.
 - **Sin contenido inventado:** todos los proyectos son reales y los construí yo; el texto de "Sobre mí" describe mis sistemas reales (clon de Astra AI, audiolibros con TTS local, FoodYou con visión por IA, sistema POS) que cualquiera puede verificar en mi GitHub.
 - **4 proyectos, no 6:** prefiero pocos proyectos bien hechos y que pueda explicar en una entrevista; incluyo los más recientes donde tomé decisiones reales de arquitectura.
+- **CSS crítico inline:** los estilos de la primera pantalla van dentro del HTML para que el primer dibujado no espere a descargar los 7 archivos CSS (bajó el FCP de 2.8 s a 0.8 s en móvil con 4G lento); los 7 archivos siguen existiendo y enlazados como pide el tema.
