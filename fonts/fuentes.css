@@ -1,0 +1,22 @@
+/* Fuentes propias, servidas desde este mismo origen (sin DNS/TLS de terceros).
+   Son las fuentes variables de Google Fonts recortadas con tools/subset-fonts.py:
+   - solo el juego de caracteres que usa el sitio (Latin-1 completo + tipografia),
+   - eje de pesos limitado a 400-800, que es lo que usa el diseno.
+   Resultado: 52.9 KB en 2 archivos, en vez de 86.6 KB, con todos los pesos exactos.
+   Para regenerarlas: python3 tools/subset-fonts.py  (requiere fonttools + brotli). */
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400 800;
+    font-display: swap;
+    src: url('fonts/Inter-var.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 400 800;
+    font-display: swap;
+    src: url('fonts/JetBrainsMono-var.woff2') format('woff2');
+}

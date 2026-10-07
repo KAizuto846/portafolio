@@ -73,7 +73,8 @@ aside[aria-label] {
     background-image: url('../img/fondo.webp');
     background-size: cover;
     background-position: center;
-    filter: brightness(1.35) contrast(1.05);
+    /* El brillo/contraste va aplicado dentro del propio webp: un filter en un
+       elemento de 240px obliga a un paso extra de pintado y encarece el LCP. */
 }
 
 .perfil {

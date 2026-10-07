@@ -32,10 +32,17 @@ Por qué esta paleta: el magenta #ff4da6 es el acento único de la referencia y 
 
 ## Tipografía
 
-- **Inter** (400, 500, 600, 700, 800): fuente de lectura, moderna y legible en pantalla; la misma que ya uso en mis prácticas.
-- **JetBrains Mono** (400, 600): para etiquetas de tecnología, fechas y citas; le da el toque "de programador".
+- **Inter** (400 a 800, variable): fuente de lectura, moderna y legible en pantalla; la misma que ya uso en mis prácticas.
+- **JetBrains Mono** (400 a 800, variable): para etiquetas de tecnología, fechas y citas; le da el toque "de programador".
 
-Se cargan desde Google Fonts con carga no bloqueante (media="print" + onload) para no penalizar el Lighthouse Performance. La fuente del sistema queda como respaldo.
+Se sirven **desde el propio sitio** (`fonts/`), no desde Google Fonts: sin DNS ni
+TLS de terceros y con `preload` de la fuente de texto para que no cambie de
+tipografía después del primer pintado. Son fuentes variables recortadas con
+`tools/subset-fonts.py`: solo el juego de caracteres que usa el sitio
+(Latin-1 completo, que cubre todo el español, más comillas tipográficas y
+guiones largos) y el eje de pesos limitado a 400-800. Pasan de 86.6 KB a
+52.9 KB en 2 archivos, y los pesos 600 y 700 siguen siendo exactos (no
+sintetizados).
 
 ## Layout
 
@@ -67,7 +74,27 @@ Solo vanilla, sin frameworks, porque el Capítulo 1 es sobre fundamentos.
 ## SEO
 
 - Title y meta description únicos.
+- `rel="canonical"` apuntando a la URL final del sitio.
 - Open Graph (og:title, og:description, og:image) para que el enlace se vea bien al compartirlo en redes.
+- `robots.txt` y `sitemap.xml` en la raíz del sitio.
+
+## Rendimiento (Lighthouse)
+
+Puntaje objetivo: 100 en las cuatro categorías. Lo que se ajustó y por qué:
+
+| Cambio | Problema que resolvía |
+| --- | --- |
+| El tema claro/oscuro se decide con un `<script>` inline en la cabecera | Con `app.js` (carga diferida) la página pintaba en oscuro y **cambiaba de tema después del primer pintado**: eso dispara el Speed Index aunque el FCP sea bueno |
+| Fuentes propias, preload y subconjunto | Las fuentes de Google venían de otro origen (DNS + TLS extra) y entraban **después** del primer pintado, volviendo a maquetar todo el texto |
+| Los 7 archivos CSS dejan de re-aplicarse en pantalla | El CSS inline y los 7 archivos tenían **el mismo contenido**: se aplicaba dos veces y forzaba un segundo recálculo de estilos y layout de toda la página |
+| Brillo del banner horneado en el webp | Un `filter` de CSS sobre el elemento LCP obliga a un paso extra de pintado |
+| Imágenes de proyecto en WebP | 35 KB -> 22 KB sin diferencia visible |
+
+Los dos scripts que mantienen esto sano:
+
+- `node tools/sync-css.mjs` — regenera el bloque CSS inline desde `css/*.css`
+  (que siguen siendo la única fuente de verdad).
+- `python3 tools/subset-fonts.py` — regenera las fuentes recortadas.
 
 ## Despliegue
 
@@ -78,4 +105,4 @@ GitHub Pages desde un repositorio dedicado, porque es gratis, no requiere cuenta
 - **Sin frameworks JS:** el portafolio usa HTML/CSS/JS vanilla para demostrar que entiendo los fundamentos.
 - **Sin contenido inventado:** todos los proyectos son reales y los construí yo; el texto de "Sobre mí" describe mis sistemas reales (clon de Astra AI, audiolibros con TTS local, FoodYou con visión por IA, sistema POS) que cualquiera puede verificar en mi GitHub.
 - **4 proyectos, no 6:** prefiero pocos proyectos bien hechos y que pueda explicar en una entrevista; incluyo los más recientes donde tomé decisiones reales de arquitectura.
-- **CSS crítico inline:** los estilos de la primera pantalla van dentro del HTML para que el primer dibujado no espere a descargar los 7 archivos CSS (bajó el FCP de 2.8 s a 0.8 s en móvil con 4G lento); los 7 archivos siguen existiendo y enlazados como pide el tema.
+- **CSS crítico inline:** el CSS de pantalla va dentro del HTML para que el primer dibujado no espere a descargar los 7 archivos CSS (bajó el FCP de 2.8 s a 0.8 s en móvil con 4G lento). Los 7 archivos siguen existiendo y enlazados; para que no vuelvan a aplicarse sobre el mismo CSS y fuercen un segundo recálculo de toda la página, se enlazan como hoja de impresión, y el bloque inline se regenera desde ellos con `node tools/sync-css.mjs` para que nunca se desincronicen.

@@ -2,32 +2,53 @@
     {
         "titulo": "Astra Clone — tutor IA self-hosted",
         "descripcion": "Réplica de Astra AI: un tutor de estudio con IA que arma lecciones, quizzes y exámenes simulados desde tus apuntes. Le agregué podcasts estilo NotebookLM (dos voces), plan de examen con roadmap semanal y versión Android instalable.",
-        "tecnologias": ["Next.js", "FastAPI", "Python", "TTS", "Tailscale"],
-        "imagen": "img/proyecto-astra.jpg",
+        "tecnologias": [
+            "Next.js",
+            "FastAPI",
+            "Python",
+            "TTS",
+            "Tailscale"
+        ],
+        "imagen": "img/proyecto-astra.webp",
         "alt": "Captura del clon de Astra AI en tema oscuro",
         "url": "https://github.com/KAizuto846/AstraClone"
     },
     {
         "titulo": "Audiolibro Generator",
         "descripcion": "Convierte libros en TXT, EPUB o PDF en audiolibros con voz local (Kokoro TTS), sin nube. Interfaz web Flask con progreso en tiempo real y voces masculina y femenina.",
-        "tecnologias": ["Python", "Flask", "Kokoro TTS"],
-        "imagen": "img/proyecto-audiolibro.jpg",
+        "tecnologias": [
+            "Python",
+            "Flask",
+            "Kokoro TTS"
+        ],
+        "imagen": "img/proyecto-audiolibro.webp",
         "alt": "Captura de la interfaz del generador de audiolibros",
         "url": "https://github.com/KAizuto846/audiolibro-generator"
     },
     {
         "titulo": "FoodYou + Foto IA",
         "descripcion": "Fork de la app FoodYou con botón Foto IA: fotografías tu comida y un modelo de visión que corre en mi propio servidor rellena automáticamente kcal, proteínas, grasas y carbohidratos.",
-        "tecnologias": ["Kotlin Multiplatform", "Ktor", "VLM", "Tailscale"],
-        "imagen": "img/proyecto-foodyou.jpg",
+        "tecnologias": [
+            "Kotlin Multiplatform",
+            "Ktor",
+            "VLM",
+            "Tailscale"
+        ],
+        "imagen": "img/proyecto-foodyou.webp",
         "alt": "Banner del proyecto FoodYou y Foto IA",
         "url": "https://github.com/KAizuto846/FoodYou-FotoIA"
     },
     {
         "titulo": "Sistema POS",
         "descripcion": "Punto de venta completo para pequeñas empresas: autenticación con recuperación de contraseña, control de productos, ventas y reportes. Incluye FEFO, versión de escritorio con Electron, tema claro/oscuro y sincronización LAN.",
-        "tecnologias": ["Next.js", "React", "Prisma", "SQLite", "Electron"],
-        "imagen": "img/proyecto-pos.jpg",
+        "tecnologias": [
+            "Next.js",
+            "React",
+            "Prisma",
+            "SQLite",
+            "Electron"
+        ],
+        "imagen": "img/proyecto-pos.webp",
         "alt": "Captura de la interfaz del sistema POS",
         "url": "https://github.com/KAizuto846/pos-system"
     }
