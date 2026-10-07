@@ -14,7 +14,7 @@ h3 {
 }
 
 h1 {
-    font-size: 1.25rem;
+    font-size: 2rem;
 }
 
 h2 {
@@ -31,8 +31,26 @@ p {
 }
 
 .marca {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.marca-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background-color: var(--color-primario);
+    color: var(--color-boton-texto);
     font-weight: 800;
-    color: var(--color-texto-fuerte);
+    font-size: 1rem;
+}
+
+.marca:hover .marca-logo {
+    background-color: var(--color-primario-hover);
 }
 
 .titulo-seccion {
