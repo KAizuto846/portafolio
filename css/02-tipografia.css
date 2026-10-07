@@ -59,6 +59,14 @@ p {
     color: var(--color-texto-muted);
 }
 
+.frase {
+    font-style: italic;
+    color: var(--color-texto-muted);
+    border-left: 3px solid var(--color-primario);
+    padding-left: var(--esp-2);
+    margin-top: var(--esp-1);
+}
+
 .fecha {
     font-family: var(--fuente-mono);
     font-size: 0.85rem;
